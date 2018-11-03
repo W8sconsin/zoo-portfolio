@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin:0;
+	display: flex;
+	flex-direction: column;
+}
+html, body {
+  	height:100%;
+	color:white;
+	font-weight:bold;
+}
+nav {
+	display:flex;
+	flex-wrap:nowrap;
+	align-items:center;
+	background-color:lightslategray;
+	justify-content:space-between;
+	padding:1em;
+}
+nav .name-in-nav{
+	font-size:1.75em;
+}
+nav a {
+	display:inline-block;
+}
+.social-link {
+	padding-left:1em;
+}
+.social-link i {
+	font-size:24px;
+	background: white;
+	color:lightslategray;
+    	padding: 0.45em;
+    	border-radius: 50%;
+}
+.content{
+  	flex: 1 0 auto;
+	font-size: 1.5em;
+    
+	min-height: 300px;
+    
+	width: 100%;
+    
+	background: transparent;
+    
+	display: grid;
+    	
+	grid-template-columns: 40% 60%;
+    
+	grid-template-rows: 100%;
+    
+	grid-column-gap: 10px;
+    
+	grid-template-areas:
+      
+	"text-content zoo-images"
+      
+	"text-content zoo-images"
+      
+	"text-content zoo-images";
+}
+
+.text-content{
+    
+	background: LightSkyBlue;
+    
+	grid-area: text-content;
+  
+	display: flex;
+	flex-direction: column;
+	padding:1em;
+	justify-content:center;
+}
+ 
+#explore-btn{
+	border: white 5px solid;
+	border-radius: 5px;
+	background: transparent;
+	color: white;
+	font-weight: bold;
+	padding:1em;
+} 
+  
+#explore-btn:hover, .social-link:hover{
+	cursor:pointer;
+}
+.zoo-images{
+ 
+	font-size:0.75em;   
+	background: LightSalmon;
+    
+	grid-area: zoo-images;
+  
+	text-align:center;
+	position:relative;
+	color: gray;
+}
+ 
+.zoo-images .object{
+    	display: inline-block;
+	position:absolute;
+}
+.zoo-images .front{
+	background:white;
+	z-index:2;
+}
+.zoo-images .mid{
+	background:lightgray;
+	z-index:1;
+}
+/* Mid Objects */
+.elephant{
+    	height: 300px;
+    	width: 440px;
+	bottom:0;
+	right:3%;
+}
+.giraffe{
+    	height: 400px;
+    	width: 200px;
+	bottom:0;
+	right:70%;
+}
+/* Front Objects*/
+.sun{
+    	height: 100px;
+    	width: 100px;
+	bottom:75%;
+	right:20%;
+}
+.flower{
+    	height: 70px;
+    	width: 70px;
+	bottom:0;
+	right:105%;
+}
+.tiger{
+    	height: 200px;
+    	width: 230px;
+	bottom:0;
+	right:50%;
+}
+.avatar{
+	height: 250px;
+	width: 125px;
+	bottom:0;
+	right:25%;
+} 
+ 
+.monkey{
+	height: 100px;
+	width: 115px;
+	bottom:0;
+	right:5%;
+} 
+footer {
+	background-color:lightgreen;
+	height:5em;
+	width:100%;
+	flex-shrink:0;
+}
+@media (max-width: 600px) {
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+	<div class="name-in-nav">Bill Bragg</div>
+	<div class="social-links">
+		<a class="social-link"><i class="fab fa-linkedin-in"></i></a>
+		<a class="social-link"><i class="fab fa-github"></i></a>
+		<a class="social-link"><i class="fas fa-at"></i></a>
+		<a class="social-link"><i class="fab fa-codepen"></i></a>
+	</div>
+</nav>
+
+<div class="content">
+<div class="text-content">
+	<h1>FRONT-END PORTFOLIO</h1>
+	<p>This paragraph summarizes technologies used on this page.  Things like Flexbox, CSS Grid, etc.
+	<p><button id="explore-btn">Explore Work</button></p>
+</div>
+  
+<div class="zoo-images">
+	<div class="sun object front">Sun</div>
+	<div class="flower object front">Flower</div>
+	<div class="tiger object front">Tiger</div>
+	<div class="avatar object front">Avatar</div>
+	<div class="monkey object front">Monkey</div>
+
+	<div class="giraffe object mid">Giraffe</div>
+	<div class="elephant object mid">Elephant</div>
+</div>
+
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
